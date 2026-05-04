@@ -14,12 +14,12 @@ Dokumen ini mencatat langkah-langkah eksekusi pembuatan portfolio secara riil.
 - ✅ Membuat file `01-brainstorm.md`, `02-details.md`, `03-execution.md`, dan `04-results.md`.
 - ✅ Membuat folder `assets/` untuk menyimpan screenshot hasil akhir.
 
-## Step 3: Pengembangan Frontend (To Do)
-- [ ] Implementasi struktur HTML Semantik (Header, Main, Footer).
-- [ ] Implementasi styling CSS (Variabel, layouting, responsive design).
-- [ ] Implementasi interaktivitas JavaScript (smooth scrolling, dll).
+## Step 3: Pengembangan Frontend
+- ✅ Implementasi struktur HTML Semantik (Header, Main, Footer).
+- ✅ Implementasi styling CSS (Variabel, layouting, responsive design).
+- ✅ Implementasi interaktivitas JavaScript (smooth scrolling, dll).
 
-## Step 4: Finalisasi & Deployment (To Do)
-- [ ] Mengambil screenshot hasil akhir untuk dokumentasi.
-- [ ] Merapikan kode dan dokumentasi.
+## Step 4: Finalisasi & Deployment
+- ✅ Mengambil screenshot hasil akhir untuk dokumentasi.
+- ✅ Merapikan kode dan dokumentasi.
 - [ ] Deployment ke GitHub Pages (opsional).
