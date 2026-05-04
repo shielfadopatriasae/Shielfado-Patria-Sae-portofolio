@@ -22,4 +22,4 @@ Dokumen ini mencatat langkah-langkah eksekusi pembuatan portfolio secara riil.
 ## Step 4: Finalisasi & Deployment
 - ✅ Mengambil screenshot hasil akhir untuk dokumentasi.
 - ✅ Merapikan kode dan dokumentasi.
-- [ ] Deployment ke GitHub Pages (opsional).
+- ✅ Deployment ke GitHub Pages (Selesai).
