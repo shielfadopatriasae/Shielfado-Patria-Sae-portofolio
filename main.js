@@ -1,74 +1,68 @@
 // ============================================
 // Portfolio JS – Shielfado Patria Sae
+// Modern & Secure
 // ============================================
 
-// --- Navbar scroll shadow ---
-const header = document.getElementById('site-header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 20);
-});
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
 
-// --- Mobile nav toggle ---
-const navToggle = document.getElementById('nav-toggle');
-const navLinks  = document.querySelector('.nav-links');
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-navLinks.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => navLinks.classList.remove('open'));
-});
+  // --- Navbar scroll shadow ---
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
 
-// --- Smooth active nav highlight ---
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navAnchors.forEach(a => {
-        a.style.color = '';
-        a.style.background = '';
+  // --- Mobile nav toggle ---
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('active');
       });
-      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
-      if (active && !active.classList.contains('btn-nav')) {
-        active.style.color = 'var(--blue-600)';
-        active.style.background = 'var(--blue-50)';
+    });
+  }
+
+  // --- Smooth scroll with safety validation ---
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      // Security: Validate anchor selector to prevent DOM-based attacks
+      if (!/^#[a-zA-Z0-9_-]+$/.test(targetId)) return;
+
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const offset = 68;
+        const top = targetEl.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
-    }
+    });
   });
-}, { rootMargin: '-40% 0px -50% 0px' });
-sections.forEach(s => observer.observe(s));
 
-// --- Fade-in on scroll ---
-const fadeEls = document.querySelectorAll(
-  '.cap-card, .proj-card, .tool-item, .timeline-item, .contact-card, .skills-group'
-);
-fadeEls.forEach(el => el.classList.add('fade-in'));
+  // --- Reveal on scroll ---
+  const revealEls = document.querySelectorAll(
+    '.cap-item, .proj-card, .tool-pill, .exp-entry, .contact-link, .hero-text, .hero-aside, .section-header-row, .col-content'
+  );
 
-const fadeObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-fadeEls.forEach(el => fadeObserver.observe(el));
+  revealEls.forEach(el => el.classList.add('reveal'));
 
-// --- Skill bar animation ---
-const skillBars = document.querySelectorAll('.skill-fill');
-const skillObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animated');
-      skillObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
-skillBars.forEach(bar => skillObserver.observe(bar));
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
 
-// --- Stagger fade-in for grids ---
-document.querySelectorAll('.cap-grid, .proj-grid, .tools-grid').forEach(grid => {
-  Array.from(grid.children).forEach((child, i) => {
-    child.style.transitionDelay = `${i * 80}ms`;
-  });
+  revealEls.forEach(el => observer.observe(el));
 });
