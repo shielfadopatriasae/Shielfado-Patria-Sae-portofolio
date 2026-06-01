@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Shielfado Patria Sae – IT Support & System Administrator with 2+ years of experience in healthcare IT infrastructure, server management, and network administration." />
-  <title>Shielfado Patria Sae – IT Support & System Administrator</title>
+  <meta name="description" content="Shielfado Patria Sae – IT Support & System Administrator. 2+ years experience in healthcare IT infrastructure, server management, and network administration." />
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://cdn.simpleicons.org https://cdn.jsdelivr.net; script-src 'self';" />
+  <meta name="referrer" content="no-referrer">
+  <title>Shielfado Patria Sae — IT Support & System Administrator</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -19,212 +19,99 @@
 
   <!-- NAVBAR -->
   <header id="site-header">
-    <nav id="navbar" aria-label="Main navigation">
-      <div class="nav-brand">
-        <span class="nav-logo">SP</span>
-        <span class="nav-name">Shielfado Patria</span>
-      </div>
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo">SPS</a>
       <ul class="nav-links" role="list">
-        <li><a href="#capabilities">Skills</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#contact" class="btn-nav">Contact</a></li>
+        <li><a href="#tools">Stack</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
       </ul>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
     </nav>
   </header>
 
   <main>
 
     <!-- HERO -->
-    <section id="hero" aria-label="Hero section">
-      <div class="hero-bg-grid"></div>
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Available for opportunities
+    <section id="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-eyebrow">IT Infrastructure & Support</p>
+          <h1>
+            Shielfado<br>
+            <em>Patria Sae</em>
+          </h1>
+          <p class="hero-tagline">Building the systems that keep healthcare running — reliably, securely, and without interruption.</p>
+          <div class="hero-cta-row">
+            <a href="#contact" class="btn btn-fill">Get In Touch</a>
+            <a href="#experience" class="btn btn-ghost">View Experience</a>
+          </div>
         </div>
-        <h1 class="hero-name">Shielfado <span class="accent">Patria Sae</span></h1>
-        <p class="hero-title">IT Support & System Administrator</p>
-        <p class="hero-tagline">"When systems fail, I step in."</p>
-        <p class="hero-desc">2+ years of experience in IT infrastructure and support within healthcare environments.
-          Specialized in server management, network configuration, and ensuring system uptime with minimal disruption.
-        </p>
-        <div class="hero-cta">
-          <a href="#contact" class="btn-primary" id="hero-contact-btn">Get In Touch</a>
-          <a href="#experience" class="btn-secondary" id="hero-experience-btn">View Experience</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num">2+</span>
-            <span class="stat-label">Years Experience</span>
+        <div class="hero-aside">
+          <div class="stat-block">
+            <span class="stat-number">2+</span>
+            <span class="stat-desc">Years in<br>Healthcare IT</span>
           </div>
           <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">5+</span>
-            <span class="stat-label">Projects Delivered</span>
+          <div class="stat-block">
+            <span class="stat-number">99%</span>
+            <span class="stat-desc">System<br>Uptime</span>
           </div>
           <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">99%</span>
-            <span class="stat-label">System Uptime</span>
+          <div class="stat-block">
+            <span class="stat-number">5+</span>
+            <span class="stat-desc">Projects<br>Delivered</span>
+          </div>
+          <div class="availability-pill">
+            <span class="avail-dot"></span> Open to new opportunities
           </div>
         </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="terminal-card">
-          <div class="terminal-header">
-            <span class="t-dot red"></span>
-            <span class="t-dot yellow"></span>
-            <span class="t-dot green"></span>
-            <span class="t-title">system_status.sh</span>
-          </div>
-          <div class="terminal-body">
-            <p><span class="t-prompt">$</span> <span class="t-cmd">uptime</span></p>
-            <p class="t-out"> 01:15:00 up 365 days, load avg: 0.01</p>
-            <p><span class="t-prompt">$</span> <span class="t-cmd">systemctl status nginx</span></p>
-            <p class="t-out t-green">● nginx.service - Active (running)</p>
-            <p><span class="t-prompt">$</span> <span class="t-cmd">ping -c1 8.8.8.8</span></p>
-            <p class="t-out t-green"> 1 packets transmitted, 0% loss</p>
-            <p><span class="t-prompt">$</span> <span class="t-cmd">zabbix_agentd status</span></p>
-            <p class="t-out t-green">● Monitoring: Active</p>
-            <p><span class="t-prompt">$</span> <span class="t-cursor">█</span></p>
-          </div>
-        </div>
-      </div>
+      <div class="hero-rule"></div>
     </section>
 
-    <!-- CAPABILITIES -->
-    <section id="capabilities" aria-labelledby="cap-heading">
-      <div class="section-container">
-        <div class="section-label">What I Do</div>
-        <h2 id="cap-heading">Core Capabilities</h2>
-        <p class="section-desc">Covering the full spectrum of IT infrastructure support in enterprise and healthcare
-          environments.</p>
-        <div class="cap-grid">
-          <div class="cap-card" id="cap-server">
-            <div class="cap-icon">🖥️</div>
-            <h3>Server Management</h3>
-            <p>Install, configure, and maintain Windows Server & Linux servers in production environments. Experience
-              with Proxmox VE virtualization.</p>
-          </div>
-          <div class="cap-card" id="cap-network">
-            <div class="cap-icon">🌐</div>
-            <h3>Network Infrastructure</h3>
-            <p>LAN setup, TCP/IP configuration, VPN management, basic routing, Wi-Fi installation, and internet
-              connectivity.</p>
-          </div>
-          <div class="cap-card" id="cap-support">
-            <div class="cap-icon">🛠️</div>
-            <h3>End-User Support</h3>
-            <p>Onsite troubleshooting for desktops, laptops, printers via ticketing systems. Hardware/software break/fix
-              resolution.</p>
-          </div>
-          <div class="cap-card" id="cap-monitor">
-            <div class="cap-icon">📊</div>
-            <h3>System Monitoring</h3>
-            <p>Real-time infrastructure monitoring using Grafana dashboards and Zabbix alerting. Proactive incident
-              detection.</p>
-          </div>
-          <div class="cap-card" id="cap-db">
-            <div class="cap-icon">🗄️</div>
-            <h3>Database Operations</h3>
-            <p>MySQL/MariaDB backup, restore, and maintenance. Database integrity management for critical healthcare
-              systems.</p>
-          </div>
-          <div class="cap-card" id="cap-asset">
-            <div class="cap-icon">📋</div>
-            <h3>Asset Management</h3>
-            <p>Full IT asset lifecycle: device setup, deployment, inventory tracking, and technical documentation.</p>
-          </div>
+    <!-- ABOUT / CAPABILITIES -->
+    <section id="about" class="section">
+      <div class="section-inner two-col">
+        <div class="col-label">
+          <span class="label-tag">What I Do</span>
         </div>
-      </div>
-    </section>
+        <div class="col-content">
+          <h2 class="section-title">Turning Infrastructure<br>Problems Into Solutions</h2>
+          <p class="section-lead">I specialize in keeping critical IT systems operational — from server management and network architecture to database integrity and real-time monitoring.</p>
 
-    <!-- SKILLS -->
-    <section id="skills" aria-labelledby="skills-heading">
-      <div class="section-container">
-        <div class="section-label">Proficiency</div>
-        <h2 id="skills-heading">Technical Skills</h2>
-        <div class="skills-layout">
-          <div class="skills-group">
-            <h3>Systems & OS</h3>
-            <div class="skill-item"><span class="skill-name">Windows Server</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:90%"></div>
-              </div><span class="skill-level">Very Good</span>
+          <div class="cap-list">
+            <div class="cap-item">
+              <div class="cap-head">
+                <span class="cap-num">01</span>
+                <h3>Server Management</h3>
+              </div>
+              <p>Deployment and maintenance of Windows Server & Linux systems. Experience with Proxmox VE virtualization in production environments.</p>
             </div>
-            <div class="skill-item"><span class="skill-name">Linux</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:88%"></div>
-              </div><span class="skill-level">Very Good</span>
+            <div class="cap-item">
+              <div class="cap-head">
+                <span class="cap-num">02</span>
+                <h3>Network Infrastructure</h3>
+              </div>
+              <p>LAN/WAN setup, TCP/IP configuration, VPN management, and Wi-Fi installation for enterprise and healthcare environments.</p>
             </div>
-            <div class="skill-item"><span class="skill-name">Windows</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:92%"></div>
-              </div><span class="skill-level">Very Good</span>
+            <div class="cap-item">
+              <div class="cap-head">
+                <span class="cap-num">03</span>
+                <h3>System Monitoring</h3>
+              </div>
+              <p>Real-time infrastructure monitoring using Grafana dashboards and Zabbix alerting for proactive incident detection.</p>
             </div>
-            <div class="skill-item"><span class="skill-name">Proxmox VE</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:72%"></div>
-              </div><span class="skill-level">Good</span>
-            </div>
-            <div class="skill-item"><span class="skill-name">MacOS</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:68%"></div>
-              </div><span class="skill-level">Good</span>
-            </div>
-          </div>
-          <div class="skills-group">
-            <h3>Networking</h3>
-            <div class="skill-item"><span class="skill-name">LAN</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:90%"></div>
-              </div><span class="skill-level">Very Good</span>
-            </div>
-            <div class="skill-item"><span class="skill-name">TCP/IP</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:88%"></div>
-              </div><span class="skill-level">Very Good</span>
-            </div>
-            <div class="skill-item"><span class="skill-name">VPN</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:85%"></div>
-              </div><span class="skill-level">Very Good</span>
-            </div>
-            <div class="skill-item"><span class="skill-name">Basic Routing</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:72%"></div>
-              </div><span class="skill-level">Good</span>
-            </div>
-          </div>
-          <div class="skills-group">
-            <h3>Tools & Monitoring</h3>
-            <div class="skill-item"><span class="skill-name">Grafana</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:75%"></div>
-              </div><span class="skill-level">Good</span>
-            </div>
-            <div class="skill-item"><span class="skill-name">Zabbix</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:75%"></div>
-              </div><span class="skill-level">Good</span>
-            </div>
-            <div class="skill-item"><span class="skill-name">MySQL/MariaDB</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:75%"></div>
-              </div><span class="skill-level">Good</span>
-            </div>
-            <div class="skill-item"><span class="skill-name">CCTV Systems</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:95%"></div>
-              </div><span class="skill-level">Excellent</span>
-            </div>
-            <div class="skill-item"><span class="skill-name">Server Installation</span>
-              <div class="skill-bar">
-                <div class="skill-fill" style="--w:95%"></div>
-              </div><span class="skill-level">Excellent</span>
+            <div class="cap-item">
+              <div class="cap-head">
+                <span class="cap-num">04</span>
+                <h3>Database Operations</h3>
+              </div>
+              <p>MySQL/MariaDB backup, restore, and maintenance with focus on data integrity for critical healthcare systems.</p>
             </div>
           </div>
         </div>
@@ -232,217 +119,152 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" aria-labelledby="exp-heading">
-      <div class="section-container">
-        <div class="section-label">Career</div>
-        <h2 id="exp-heading">Work Experience</h2>
-        <div class="timeline">
-          <article class="timeline-item" id="exp-rsud">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="exp-header">
-                <div>
-                  <h3>IT Infrastructure & Support</h3>
-                  <p class="exp-company">RSUD Bayung Lencir, Musi Banyuasin</p>
-                </div>
-                <span class="exp-period">Jan 2024 – Present</span>
-              </div>
-              <ul class="exp-list">
-                <li>Provided onsite IT support and resolved user issues through ticketing systems</li>
-                <li>Performed break/fix troubleshooting for desktops, laptops, printers, and network issues</li>
-                <li>Installed, configured, and maintained Windows Server and Linux servers in production</li>
-                <li>Performed backup and restore operations for systems and databases</li>
-                <li>Managed IT asset lifecycle including device setup, deployment, and inventory tracking</li>
-                <li>Supported network infrastructure (LAN, TCP/IP, VPN, basic routing)</li>
-                <li>Monitored system performance using Grafana and Zabbix</li>
-                <li>Created technical documentation and system reports</li>
+    <section id="experience" class="section section-dark">
+      <div class="section-inner">
+        <div class="section-header-row">
+          <span class="label-tag label-light">Career</span>
+          <h2 class="section-title light">Work Experience</h2>
+        </div>
+
+        <div class="exp-list">
+          <div class="exp-entry">
+            <div class="exp-left">
+              <span class="exp-period">Jan 2024 — Present</span>
+              <span class="exp-type">Full-Time</span>
+            </div>
+            <div class="exp-right">
+              <h3 class="exp-role">IT Infrastructure & Support</h3>
+              <p class="exp-org">RSUD Bayung Lencir · Musi Banyuasin, Sumatera Selatan</p>
+              <ul class="exp-bullets">
+                <li>Provided onsite IT support via ticketing system, resolving hardware, software, and network issues</li>
+                <li>Installed, configured, and maintained Windows Server and Linux servers in a production healthcare environment</li>
+                <li>Performed backup, restore, and integrity checks for systems and MySQL/MariaDB databases</li>
+                <li>Monitored system performance using Grafana and Zabbix; managed IT asset lifecycle</li>
+                <li>Supported BPJS & SATUSEHAT API integrations with government healthcare platforms</li>
               </ul>
-              <div class="exp-tags">
-                <span class="tag">Windows Server</span>
-                <span class="tag">Linux</span>
-                <span class="tag">Grafana</span>
-                <span class="tag">Zabbix</span>
-                <span class="tag">MySQL</span>
-                <span class="tag">VPN</span>
+              <div class="exp-skills">
+                <span>Windows Server</span><span>Linux</span><span>Grafana</span><span>Zabbix</span><span>MySQL</span><span>VPN</span><span>Proxmox</span>
               </div>
             </div>
-          </article>
-          <article class="timeline-item" id="exp-edu">
-            <div class="timeline-marker edu"></div>
-            <div class="timeline-content">
-              <div class="exp-header">
-                <div>
-                  <h3>Bachelor of Science – Computer Science</h3>
-                  <p class="exp-company">Universitas Dinamika Bangsa, Jambi</p>
-                </div>
-                <span class="exp-period">Jan 2019 – Dec 2023</span>
-              </div>
-              <p class="exp-gpa">GPA: <strong>3.36</strong> / 4.00</p>
+          </div>
+
+          <div class="exp-entry">
+            <div class="exp-left">
+              <span class="exp-period">2019 — 2023</span>
+              <span class="exp-type">Education</span>
             </div>
-          </article>
+            <div class="exp-right">
+              <h3 class="exp-role">Bachelor of Computer Science</h3>
+              <p class="exp-org">Universitas Dinamika Bangsa · Jambi</p>
+              <p class="exp-gpa">GPA 3.36 / 4.00</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" aria-labelledby="proj-heading">
-      <div class="section-container">
-        <div class="section-label">Portfolio</div>
-        <h2 id="proj-heading">Project Experience</h2>
+    <section id="projects" class="section">
+      <div class="section-inner">
+        <div class="section-header-row">
+          <span class="label-tag">Projects</span>
+          <h2 class="section-title">Selected Work</h2>
+        </div>
+
         <div class="proj-grid">
-          <article class="proj-card" id="proj-bpjs">
-            <div class="proj-num">01</div>
+          <div class="proj-card">
+            <span class="proj-index">01</span>
+            <h3>SIMRS API Monitoring Dashboard</h3>
+            <p>Developed a real-time telemetry dashboard to monitor 12 critical BPJS & Kemenkes APIs. Features a Glassmorphism React UI, WAF bypassing, smart caching, and HA Docker Swarm deployment.</p>
+            <div class="proj-tags"><span>Laravel</span><span>React</span><span>Docker Swarm</span></div>
+            <a href="https://github.com/shielfadopatriasae/simrs-monitoring-dashboard" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:1.5rem; font-weight:600; color:var(--clr-primary); text-decoration:none; font-size:0.9rem;">View on GitHub ↗</a>
+          </div>
+          <div class="proj-card">
+            <span class="proj-index">02</span>
             <h3>BPJS & SATUSEHAT API Integration</h3>
-            <p>System integration with government healthcare APIs. Handled authentication, data sync, error handling,
-              timeout issues, and rate limiting for production environment.</p>
-            <div class="proj-tags">
-              <span class="tag">API Integration</span>
-              <span class="tag">Healthcare</span>
-              <span class="tag">BPJS</span>
-              <span class="tag">SATUSEHAT</span>
-            </div>
-          </article>
-          <article class="proj-card" id="proj-linux">
-            <div class="proj-num">02</div>
-            <h3>Linux Server Deployment & Docker</h3>
-            <p>Full Linux server deployment with Docker containerization implementation for service isolation and
-              simplified application management in production.</p>
-            <div class="proj-tags">
-              <span class="tag">Linux</span>
-              <span class="tag">Docker</span>
-              <span class="tag">Server</span>
-              <span class="tag">Containerization</span>
-            </div>
-          </article>
-          <article class="proj-card" id="proj-automation">
-            <div class="proj-num">03</div>
+            <p>Integrated local hospital systems with national government healthcare APIs. Handled authentication, token management, error handling, and rate limiting in a live production environment.</p>
+            <div class="proj-tags"><span>API</span><span>Healthcare IT</span><span>Security</span></div>
+          </div>
+          <div class="proj-card">
+            <span class="proj-index">03</span>
+            <h3>Linux Server & Docker Deployment</h3>
+            <p>Migrated legacy services to containerized Docker environments on Linux, enabling better fault isolation and faster deployments.</p>
+            <div class="proj-tags"><span>Linux</span><span>Docker</span><span>Server</span></div>
+          </div>
+          <div class="proj-card">
+            <span class="proj-index">04</span>
             <h3>IT Process Automation</h3>
-            <p>Developed automation scripts and workflows to streamline repetitive IT operations, reducing manual
-              workload and improving operational efficiency.</p>
-            <div class="proj-tags">
-              <span class="tag">Automation</span>
-              <span class="tag">Scripting</span>
-              <span class="tag">Efficiency</span>
-            </div>
-          </article>
-          <article class="proj-card" id="proj-infra">
-            <div class="proj-num">04</div>
+            <p>Developed scripts and automated workflows to reduce manual IT operations, minimizing human error and freeing up team capacity.</p>
+            <div class="proj-tags"><span>Automation</span><span>Scripting</span><span>Efficiency</span></div>
+          </div>
+          <div class="proj-card">
+            <span class="proj-index">05</span>
             <h3>Infrastructure Optimization</h3>
-            <p>Performance tuning and stability improvements across the server infrastructure, resulting in improved
-              uptime and reduced incident response time.</p>
-            <div class="proj-tags">
-              <span class="tag">Performance</span>
-              <span class="tag">Optimization</span>
-              <span class="tag">Monitoring</span>
-            </div>
-          </article>
+            <p>Tuned and stabilized server infrastructure, resulting in improved uptime and significantly reduced incident response time.</p>
+            <div class="proj-tags"><span>Performance</span><span>Monitoring</span><span>Optimization</span></div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- TOOLS -->
-    <section id="tools" aria-labelledby="tools-heading">
-      <div class="section-container">
-        <div class="section-label">Stack</div>
-        <h2 id="tools-heading">Tools I Use</h2>
+    <section id="tools" class="section section-subtle">
+      <div class="section-inner">
+        <div class="section-header-row">
+          <span class="label-tag">Stack</span>
+          <h2 class="section-title">Tools & Technologies</h2>
+        </div>
+
         <div class="tools-grid">
-          <div class="tool-item" id="tool-grafana">
-            <img src="https://cdn.simpleicons.org/grafana/F46800" alt="Grafana" class="tool-logo" />
-            <span>Grafana</span>
-          </div>
-          <div class="tool-item" id="tool-zabbix">
-            <svg class="tool-logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="8" fill="#CC0000" />
-              <polygon points="10,11 38,11 38,18 20,30 38,30 38,37 10,37 10,30 28,18 10,18" fill="white" />
-            </svg>
-            <span>Zabbix</span>
-          </div>
-          <div class="tool-item" id="tool-proxmox">
-            <img src="https://cdn.simpleicons.org/proxmox/E57000" alt="Proxmox VE" class="tool-logo" />
-            <span>Proxmox VE</span>
-          </div>
-          <div class="tool-item" id="tool-mysql">
-            <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" class="tool-logo" />
-            <span>MySQL / MariaDB</span>
-          </div>
-          <div class="tool-item" id="tool-mariadb">
-            <img src="https://cdn.simpleicons.org/mariadb/003545" alt="MariaDB" class="tool-logo" />
-            <span>MariaDB</span>
-          </div>
-          <div class="tool-item" id="tool-docker">
-            <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" class="tool-logo" />
-            <span>Docker</span>
-          </div>
-          <div class="tool-item" id="tool-linux">
-            <img src="https://cdn.simpleicons.org/linux/FCC624" alt="Linux" class="tool-logo" />
-            <span>Linux</span>
-          </div>
-          <div class="tool-item" id="tool-windows">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg"
-              alt="Windows Server" class="tool-logo" />
-            <span>Windows Server</span>
-          </div>
-          <div class="tool-item" id="tool-mobaxterm">
-            <svg class="tool-logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <rect width="48" height="48" rx="8" fill="#1a1a2e" />
-              <text x="6" y="30" font-family="monospace" font-weight="bold" font-size="15" fill="#22d3ee">&gt;_</text>
-              <rect x="6" y="34" width="36" height="2" rx="1" fill="#22d3ee" opacity="0.4" />
-            </svg>
-            <span>MobaXterm</span>
-          </div>
-          <div class="tool-item" id="tool-navicat">
-            <img src="https://cdn.simpleicons.org/dbeaver/382923" alt="Navicat" class="tool-logo" />
-            <span>Navicat</span>
-          </div>
-          <div class="tool-item" id="tool-zabbix-agent">
-            <img src="https://cdn.simpleicons.org/ansible/EE0000" alt="Automation" class="tool-logo" />
-            <span>Automation</span>
-          </div>
-          <div class="tool-item" id="tool-vpn">
-            <img src="https://cdn.simpleicons.org/openvpn/EA7E20" alt="VPN" class="tool-logo" />
-            <span>OpenVPN</span>
-          </div>
+          <div class="tool-pill"><img src="https://cdn.simpleicons.org/linux/1a1a1a" alt="Linux" /><span>Linux</span></div>
+          <div class="tool-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows8/windows8-original.svg" alt="Windows Server" /><span>Windows Server</span></div>
+          <div class="tool-pill"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" /><span>Docker</span></div>
+          <div class="tool-pill"><img src="https://cdn.simpleicons.org/proxmox/E57000" alt="Proxmox" /><span>Proxmox VE</span></div>
+          <div class="tool-pill"><img src="https://cdn.simpleicons.org/grafana/F46800" alt="Grafana" /><span>Grafana</span></div>
+          <div class="tool-pill"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" /><span>MySQL / MariaDB</span></div>
+          <div class="tool-pill"><img src="https://cdn.simpleicons.org/openvpn/EA7E20" alt="OpenVPN" /><span>OpenVPN</span></div>
+          <div class="tool-pill"><img src="https://cdn.simpleicons.org/mariadb/003545" alt="MariaDB" /><span>MariaDB</span></div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- CONTACT / FOOTER -->
-  <footer>
-    <section id="contact" aria-labelledby="contact-heading">
-      <div class="section-container">
-        <div class="section-label">Let's Connect</div>
-        <h2 id="contact-heading">Get In Touch</h2>
-        <p class="contact-desc">Looking for a reliable IT Support & System Administrator? Let's talk.</p>
-        <div class="contact-cards">
-          <a href="mailto:shielfadopatria@gmail.com" class="contact-card" id="contact-email">
-            <span class="contact-icon">✉️</span>
+  <!-- CONTACT & FOOTER -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <p class="footer-eyebrow">Let's Connect</p>
+        <h2 class="footer-heading">Ready to work<br>together?</h2>
+        <div class="footer-contacts">
+          <a href="mailto:shielfadopatria@gmail.com" class="contact-link">
+            <span class="contact-icon">✉</span>
             <div>
-              <span class="contact-label">Email</span>
-              <span class="contact-value">shielfadopatria@gmail.com</span>
+              <span class="cl-label">Email</span>
+              <span class="cl-val">shielfadopatria@gmail.com</span>
             </div>
           </a>
-          <a href="https://wa.me/6285788607416" target="_blank" rel="noopener noreferrer" class="contact-card"
-            id="contact-wa">
+          <!-- Security: rel="noopener noreferrer" mencegah reverse tabnabbing -->
+          <a href="https://wa.me/6285788607416" target="_blank" rel="noopener noreferrer" class="contact-link">
             <span class="contact-icon">💬</span>
             <div>
-              <span class="contact-label">WhatsApp</span>
-              <span class="contact-value">+62 857-8860-7416</span>
+              <span class="cl-label">WhatsApp</span>
+              <span class="cl-val">+62 857-8860-7416</span>
             </div>
           </a>
-          <div class="contact-card" id="contact-location">
+          <div class="contact-link no-hover">
             <span class="contact-icon">📍</span>
             <div>
-              <span class="contact-label">Location</span>
-              <span class="contact-value">Musi Banyuasin, Sumatera Selatan</span>
+              <span class="cl-label">Location</span>
+              <span class="cl-val">Musi Banyuasin, Sumatera Selatan</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <div class="footer-bottom">
-      <p>© 2025 Shielfado Patria Sae · IT Support & System Administrator</p>
+      <div class="footer-bottom">
+        <p>© 2025 Shielfado Patria Sae</p>
+        <p class="footer-sec">🔒 Secured with CSP & Web Standards</p>
+      </div>
     </div>
   </footer>
 
